@@ -1,0 +1,59 @@
+<!-- Bubbling and Capturing are the two phases of propagation. -->
+<!-- In their simplest definitions, -->
+<!-- bubbling travels from the target to the root, -->
+<!-- and capturing travels from the root to the target -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      .main {
+        position: relative;
+        text-align: center;
+        width: 386px;
+        border: 27px solid green;
+        padding: 50px;
+        margin: auto;
+        margin-top: 199px;
+        height: 132px;
+      }
+      .main .parent {
+        border: 12px solid rgb(182, 9, 9);
+        position: relative;
+        text-align: center;
+        width: 352px;
+        padding: 39px;
+        margin: auto;
+        margin-top: 7px;
+        height: 99px;
+        right: 34px;
+        bottom: 42px;
+      }
+      .child {
+        background: black;
+        height: 104px;
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="main" id="main">
+      <div class="parent" id="parent">
+        <div class="child" id="child"></div>
+      </div>
+    </div>
+    <script>
+      document.getElementById("main").addEventListener("click", () => {
+        console.log("main event click");
+      });
+      document.getElementById("parent").addEventListener("click", () => {
+        console.log("parent event click");
+      });
+      document.getElementById("child").addEventListener("click", () => {
+        console.log("child event click");
+      });
+    </script>
+  </body>
+</html>
