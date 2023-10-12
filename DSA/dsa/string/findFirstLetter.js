@@ -1,7 +1,3 @@
-const string = "rehan ahmad";
-const res = string.split(" ").map((item) => item);
-console.log(res);
-
 // first method
 
 // const firstLtter = (str) => {
@@ -35,13 +31,24 @@ console.log(res);
 // const res = firstLtter(string);
 // console.log(res)
 
-// "stric mode";
-
-// let obj = {
-//   name: "rehan",
+// const findFirstLater = (str) => {
+//   let firstChar = "";
+//   let isFirst = true;
+//   for (let ch of str) {
+//     if (isFirst & (firstChar !== " ")) {
+//       firstChar += ch;
+//       isFirst = false;
+//     } else if (ch === " ") {
+//       isFirst = true;
+//     }
+//   }
+//   return firstChar;
 // };
-// const res = () => {
-//   console.log(this.name);
-// };
+// let string = "rehan ahmad makh";
+// let res = findFirstLater(string);
+// console.log(res);
 
-// res(obj);
+const findFirstLater = (str) => {};
+let string = "Rehan ahmad makhdoompur";
+let res = findFirstLater(string);
+console.log(res);

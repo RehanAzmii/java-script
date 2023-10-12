@@ -12,6 +12,6 @@
 
 // pillars of oops
 //1 Abstarction :- hide to details for xample fetch methods
-// En capsulation:- wrapped the data
-// Inheritance:-data inherite parent to child
-// Polymorphism:- many phase of object
+//2 En capsulation:- wrapped the data
+//3 Inheritance:-data inherite parent to child
+//4 Polymorphism:- many phase of object

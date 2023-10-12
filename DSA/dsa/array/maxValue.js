@@ -21,18 +21,18 @@
 // const res = maxValueFunc(array);
 // console.log(res);
 
-function findMinValue(arr) {
-  let minValue = arr[0]; // Assume first element is the min
+// function findMinValue(arr) {
+//   let minValue = arr[0]; // Assume first element is the min
 
-  for (let i = 1; i < arr.length; i++) {
-    if (arr[i] < minValue) {
-      minValue = arr[i]; // Update min value if a smaller element is found
-    }
-  }
+//   for (let i = 1; i < arr.length; i++) {
+//     if (arr[i] < minValue) {
+//       minValue = arr[i]; // Update min value if a smaller element is found
+//     }
+//   }
 
-  return minValue;
-}
+//   return minValue;
+// }
 
-const array = [3, 8, 2, 10, 5];
-const min = findMinValue(array);
-console.log("The minimum value is:", min); // Output: The minimum value is:
+// const array = [3, 8, 2, 10, 5];
+// const min = findMinValue(array);
+// console.log("The minimum value is:", min); // Output: The minimum value is:

@@ -58,17 +58,17 @@
 //   console.log("iife is called");
 // })();
 
-// function myFunc() {
-//   console.log("Welcome to");
-//   // This will be executed after executing the previous log.
-//   (function () {
-//     console.log("GeeksForGeeks!");
-//   })();
-//   console.log("Hi There!");
-// }
+function myFunc() {
+  console.log("Welcome to");
+  // This will be executed after executing the previous log.
+  console.log("Hi There!");
+  (function () {
+    console.log("GeeksForGeeks!");
+  })();
+}
 
-// // Calling the Function.
-// myFunc();
+// Calling the Function.
+myFunc();
 
 // function currying
 // curring in js transfer function with multiple argument in to nested sreies of function

@@ -14,3 +14,16 @@
 // let string = "RehanAhmadMakhdoomPur";
 // const res = capitalLetterIndex(string);
 // console.log(res);
+
+// const capitalIndex = (str) => {
+//   let capitalindex = "";
+//   for (let i of str) {
+//     if ((i >= "A") & (i <= "Z")) {
+//       capitalindex += i;
+//     }
+//   }
+//   return capitalindex;
+// };
+// let string = "RehanAhmadMakhdoomPur";
+// let res = capitalIndex(string);
+// console.log(res);

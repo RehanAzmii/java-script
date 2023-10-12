@@ -28,7 +28,7 @@
 // console.log(obj);
 
 // deep copy work with nexted object with help of JSON.stringify
-// deep copy copy copy the nested object
+// deep copy:- copy the nested object
 // disadvantage of deep copy
 // not work with function and date
 

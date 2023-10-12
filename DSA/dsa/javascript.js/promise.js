@@ -5,18 +5,21 @@
 // promise have three stages resolve,pending $ reject
 
 // produce promise
-
-// const promise = new Promise((resolve, reject) => {
-//   resolve("rehan");
-// });
-
-// promise
-//   .then((result) => {
-//     console.log(result);
-//   })
-//   .catch((error) => {
-//     console.log(error);
-//   });
+let promise = new Promise((resolve, reject) => {
+  let data = 5;
+  if (data < 4) {
+    resolve("promise resolve");
+  } else {
+    resolve("promise is rejected");
+  }
+});
+promise
+  .then((result) => {
+    console.log(result);
+  })
+  .catch((err) => {
+    console.log(err);
+  });
 
 // resolve two promise when we call api
 // let url = "https://jsonplaceholder.typicode.com/users";

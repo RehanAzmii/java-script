@@ -10,7 +10,7 @@
 const array = [1, 2, 2, 3, 4, 4, 5, 6, 6];
 let uniqueValue = [];
 for (let i = 0; i < array.length; i++) {
-  if (uniqueValue.indexOf(array[i]) === -1) {
+  if (!uniqueValue.includes(array[i])) {
     uniqueValue.push(array[i]);
   }
 }

@@ -6,8 +6,15 @@
 // arrow function and function expression does not support hoisting in java script
 
 // function hoist() {
-//   console.log(a);// undefine
+//   console.log(a); // undefine
 //   var a = 10;
-//   console.log(a);// 10
+//   console.log(a); // 10
 // }
 // hoist();
+
+const hoist = () => {
+  console.log(a); // undefine
+  var a = 10;
+  console.log(a); // 10
+};
+hoist();
