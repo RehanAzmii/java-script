@@ -71,7 +71,7 @@ function myFunc() {
 myFunc();
 
 // function currying
-// curring in js transfer function with multiple argument in to nested sreies of function
+// curring in js transfer function with multiple arguments in to nested sreies of function
 //  each take a single argument
 
 // let sum = (a) => (b) => (c) => console.log(a + b + c);

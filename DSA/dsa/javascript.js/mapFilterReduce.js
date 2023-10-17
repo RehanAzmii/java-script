@@ -19,3 +19,10 @@
 // let array = [1, 2, 3, 4, 5];
 // let res = array.reduce((acc, cur) => acc + cur);
 // console.log(res);
+
+let array = [1, 2, , 3, 4, 5];
+
+let res = array.reduce((acc, cur) => {
+  return acc + cur;
+});
+console.log(res);

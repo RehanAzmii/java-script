@@ -30,22 +30,37 @@
 
 // console.log("Duplicate elements in the array:", duplicates);
 
-function firstRepeatingElement(arr) {
-  // Nested loop to check for repeating elements
+// find duplicate  using two loop
+const findDuplicate = (arr) => {
+  let duplicate = [];
   for (let i = 0; i < arr.length; i++) {
     for (let j = i + 1; j < arr.length; j++) {
-      // If a repeating element is found, return its index
-      if (arr[i] === arr[j]) {
-        return i;
+      if (arr[i] === arr[j] && !duplicate.includes(arr[i])) {
+        duplicate.push(arr[i]);
       }
     }
   }
-  // If no repeating element is found, return -1
-  return -1;
-}
+  return duplicate;
+};
+let array = [1, 1, 2, 2, 3, 4, 4, 6, 6];
+let res = findDuplicate(array);
+console.log(res);
+// function firstRepeatingElement(arr) {
+//   // Nested loop to check for repeating elements
+//   for (let i = 0; i < arr.length; i++) {
+//     for (let j = i + 1; j < arr.length; j++) {
+//       // If a repeating element is found, return its index
+//       if (arr[i] === arr[j]) {
+//         return i;
+//       }
+//     }
+//   }
+//   // If no repeating element is found, return -1
+//   return -1;
+// }
 
-// Driver code
-const arr = [10, 5, 3, 4, 3, 5, 6];
-// Finding the index of first repeating element
-const index = firstRepeatingElement(arr);
-console.log(index);
+// // Driver code
+// const arr = [10, 5, 3, 4, 3, 5, 6];
+// // Finding the index of first repeating element
+// const index = firstRepeatingElement(arr);
+// console.log(index);

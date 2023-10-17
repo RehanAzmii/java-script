@@ -8,10 +8,10 @@
 // user.name = "bruce";
 // console.log(obj);
 
-// shalow coppy for shalow copy
+// shalow coppy
 // shalow copy only copy the main object
 // shalow copy work only single lavel object dont work with nested object
-// after shalow copy compiare only object value not memory location
+// after shalow copy compare only object value not memory location
 // const obj = {
 //   name: "peter",
 // };
