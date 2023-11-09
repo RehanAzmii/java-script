@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./calApi.js" defer></script>
+    <title>call api</title>
+    <!-- <script>
+      let api = "https://jsonplaceholder.typicode.com/users";
+      async function callApi() {
+        let result = await fetch(api);
+        result = await result.json();
+        console.log(result);
+        document.getElementById("userdata").innerHTML = result
+          .map((user) => {
+            return `<tr>
+                <td>${user.name}</td>
+                <td>${user.email}</td>
+                <td>${user.username}</td>
+                <td>${user.address.city}</td>
+                <td>${user.address.zipcode}</td>
+               
+            </tr>`;
+          })
+          .join("");
+      }
+      callApi();
+    </script> -->
+  </head>
+  <body>
+    <h1>api call in javaScript</h1>
+    <table border="1">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>User Name</th>
+          <th>City</th>
+          <th>Zip Code</th>
+        </tr>
+      </thead>
+      <tbody id="userdata"></tbody>
+    </table>
+  </body>
+</html>
