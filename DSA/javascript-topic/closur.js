@@ -10,16 +10,16 @@
 
 // // high order function
 
-// const callBackFunc = () => {
-//   console.log("this is a call back functio");
-// };
-// const highorederFunction = (func) => {
-//   console.log("this is a high order function");
-//   func();
-// };
+const callBackFunc = () => {
+  console.log("this is a call back functio");
+};
+const highorederFunction = (func) => {
+  func();
+  console.log("this is a high order function");
+};
 
-// highorederFunction(callBackFunc);
-
+highorederFunction(callBackFunc);
+console.log(2);
 // // function currying
 
 // const sum = (a) => (b) => (c) => (d) => console.log(a + (b % c) + d);

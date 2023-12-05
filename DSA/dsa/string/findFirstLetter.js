@@ -48,7 +48,9 @@
 // let res = findFirstLater(string);
 // console.log(res);
 
-const findFirstLater = (str) => {};
+const findFirstLater = (str) => {
+  t;
+};
 let string = "Rehan ahmad makhdoompur";
 let res = findFirstLater(string);
 console.log(res);

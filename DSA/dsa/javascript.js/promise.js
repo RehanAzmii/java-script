@@ -150,8 +150,8 @@ promise
 // async await
 // async await introduce in es8 2017
 //"async and await make promises easier to write"
-//  async makes a function return a Promise.
-//  await makes a function wait for a Promise
+// async makes a function return a Promise.
+// await makes a function wait for a Promise
 
 // diffrence
 // syntax error = syntax is big

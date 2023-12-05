@@ -29,6 +29,6 @@ const palindrome = (str) => {
   }
   return true;
 };
-let string = "121";
+let string = "121 ";
 let res = palindrome(string);
 console.log(res);

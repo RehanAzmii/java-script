@@ -50,19 +50,24 @@
 // let string = "rehan----ahmad---makhdoompur";
 // let res = removeHyphen(string);
 // console.log(res);
+// let myString = "this--is-a-string-with-hyphens";
+// let myArray = myString.split("");
 
-let removeHyphen = (str) => {
-  let result = "";
-  let prevChar = "";
-  for (let ch of str) {
-    if ((ch == "-") & (prevChar == "-")) {
-      continue;
-    }
-    result += ch;
-    prevChar = ch;
-  }
-  return result;
+// myArray.forEach(function (element, index) {
+//   if (element === "-") {
+//     myArray[index] = " ";
+//   }
+// });
+
+// let newString = myArray.join("");
+// console.log(newString); // "this_is_a_string_with_hyphens"
+
+let url = "https://jsonplaceholder.typicode.com/users";
+
+const getData = async () => {
+  let res = await fetch(url);
+  res = await res.json(res);
+  console.log(res);
 };
-let string = "Rehan--- ahmad--- makhdoompur";
-let res = removeHyphen(string);
-console.log(res);
+
+getData();

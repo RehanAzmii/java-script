@@ -28,7 +28,12 @@ let array1 = [1, 2, 3, 4];
 let array2 = [5, 6, 7, 8];
 let array3 = [];
 
-for (let el of array1) {
-  array3[el] = el;
+for (let i = 0; i < array1.length; i++) {
+  array3[i] = array1[i];
 }
+
+for (let i = 0; i < array2.length; i++) {
+  array3[array1.length + i] = array2[i];
+}
+
 console.log(array3);

@@ -6,13 +6,12 @@
 // They help maintain modular code
 
 const func = () => {
-  let a = 10;
+  let a = 0;
   let innerFunc = () => {
-    console.log(a);
     a++;
+    console.log(a);
   };
   return innerFunc;
 };
-const res = func();
-res();
+let res = func();
 res();
