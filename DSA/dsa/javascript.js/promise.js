@@ -47,7 +47,7 @@ promise
 
 // promise.all
 // we call three api at a time then use the promise.all
-//  but if all api resolve then give output otherwise not get value
+// but if all api resolve then give output otherwise not get value
 // promise.all take value as array
 // let data = Promise.all([
 //   new Promise((resolve, reject) => {

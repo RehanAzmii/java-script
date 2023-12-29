@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <bod>
+    <p id="parent">Parnt state:initial state</p>
+    <button id="button">updat parent state</button>
+
+    <script>
+      let parent = document.getElementById("parent");
+      let button = document.getElementById("button");
+      let parentState = "initial state";
+      const updateParent = (newState) => {
+        parentState = newState;
+        parent.textContent = `Parent State: ${parentState}`;
+      };
+      button.addEventListener("click", () => {
+        const newChildState = "New state from child";
+
+        updateParent(newChildState);
+      });
+    </script>
+  </bod>
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Update Parent State</title>
+  </head>
+  <body>
+    <div id="parent-container">
+      <p id="parent-state">Parent State: Initial state</p>
+      <button id="update-button">Update Parent State</button>
+    </div>
+
+    <script>
+      // Parent component
+      const parentStateElement = document.getElementById("parent-state");
+      const updateButton = document.getElementById("update-button");
+
+      let parentState = "Initial state";
+
+      // Callback function to update parent state
+      const updateParentState = (newState) => {
+        parentState = newState;
+        parentStateElement.textContent = `Parent State: ${parentState}`;
+      };
+
+      // Child component
+      updateButton.addEventListener("click", () => {
+        // Simulating an action in the child component
+        const newChildState = "New state from child";
+
+        // Call the callback function to update the parent state
+        updateParentState(newChildState);
+      });
+    </script>
+  </body>
+</html> -->

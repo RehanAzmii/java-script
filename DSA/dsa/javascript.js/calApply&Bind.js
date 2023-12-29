@@ -22,13 +22,13 @@
 // let res = printDetails.bind(userDetails1, "india", "noida");
 // res();
 
-let user = {
+let userDetail = {
   name: "rehan",
-  lastName: "ahmad",
+  last: "ahmad",
 };
 
 function printDetails(country, city) {
-  console.log(this.name + " " + this.lastName + " " + country + " " + city);
+  console.log(`my name is ${this.name} ${this.last} ${country} ${city}`);
 }
 
-printDetails.call(user, "india", "noida");
+printDetails.call(userDetail, "india", "lucknow");

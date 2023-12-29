@@ -1,29 +1,7 @@
 // what is the anagram
 // same charector make the other word like cat= act it is anagram
 // length is same
-
-// const checkAnagram = (str1, str2) => {
-//   // check occurences
-//   let Objstr1 = {};
-//   // first check the length
-//   if (str1.length !== str2.length) {
-//     return false;
-//   }
-//   for (ch of str1) {
-//
-//     Objstr1[ch] = (Objstr1[ch] || 0) + 1;
-//   }
-//   for (ch of str2) {
-//
-//     if (!Objstr1[ch]) {
-//       return false;
-//     }
-//     Objstr1[ch]--;
-//   }
-//   return true;
-// };
-// console.log(checkAnagram("hello", "olleh"));
-
+// number of later is same but arragement is difrence is called anagram
 // same charector make the other word like cat = act is anagram
 
 const anagram = (str1, str2) => {
@@ -45,4 +23,6 @@ const anagram = (str1, str2) => {
   }
   return true;
 };
-console.log(anagram("hello", "lleho"));
+console.log(anagram("hello", "lllho"));
+
+// o(n) linear time complexity

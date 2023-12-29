@@ -35,21 +35,21 @@
 // let res = removeHyphen(string);
 // console.log(res);
 
-// const removeHyphen = (str) => {
-//   let result = "";
-//   let previousCha = "";
-//   for (let ch of str) {
-//     if ((ch === "-") & (previousCha === "-")) {
-//       continue;
-//     }
-//     result += ch;
-//     previousCha = ch;
-//   }
-//   return result;
-// };
-// let string = "rehan----ahmad---makhdoompur";
-// let res = removeHyphen(string);
-// console.log(res);
+const removeHyphen = (str) => {
+  let result = "";
+  let previousCha = "";
+  for (let ch of str) {
+    if ((ch === "-") & (previousCha === "-")) {
+      continue;
+    }
+    result += ch;
+    previousCha = ch;
+  }
+  return result;
+};
+let string = "rehan----ahmad---makhdoompur";
+let res = removeHyphen(string);
+console.log(res);
 // let myString = "this--is-a-string-with-hyphens";
 // let myArray = myString.split("");
 
@@ -62,12 +62,12 @@
 // let newString = myArray.join("");
 // console.log(newString); // "this_is_a_string_with_hyphens"
 
-let url = "https://jsonplaceholder.typicode.com/users";
+// let url = "https://jsonplaceholder.typicode.com/users";
 
-const getData = async () => {
-  let res = await fetch(url);
-  res = await res.json(res);
-  console.log(res);
-};
+// const getData = async () => {
+//   let res = await fetch(url);
+//   res = await res.json(res);
+//   console.log(res);
+// };
 
-getData();
+// getData();

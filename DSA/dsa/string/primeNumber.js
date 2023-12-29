@@ -2,19 +2,25 @@
 //A prime number is a positive integer that is only divided by 1 and itself .
 //for example 2,3,5,11 are first few prime numbers
 
-var number = prompt("please enter a number");
-if (number == 1) {
-  console.log(`${number} is neither prime nor composite number`);
-} else if (number < 1) {
-  console.log(`${number} is not a prime number`);
-} else {
-  for (var i = 2; i < number; i++) {
-    if (number % i == 0) {
-      var res = `${number} is not a prime number`;
-      break;
-    } else {
-      var res = `${number} is  a prime number`;
+function isPrime(number) {
+  if (number <= 1) {
+    return false;
+  }
+
+  // Check for factors up to the square root of the number
+  for (let i = 2; i <= number; i++) {
+    if (number % i === 0) {
+      return false; // Number is divisible by i, not a prime number
     }
   }
-  console.log(res);
+
+  return true; // Number is prime
+}
+
+// Example usage
+const checkNumber = 17; // Change this number to check for primality
+if (isPrime(checkNumber)) {
+  console.log(checkNumber + " is a prime number.");
+} else {
+  console.log(checkNumber + " is not a prime number.");
 }
