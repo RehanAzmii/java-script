@@ -29,12 +29,15 @@
 
 const findUniqueElement = (arr) => {
   let uniqueEle = [];
+  let duplicate = [];
   for (let el of arr) {
     if (!uniqueEle.includes(el)) {
       uniqueEle.push(el);
+    } else {
+      duplicate.push(el);
     }
   }
-  return uniqueEle;
+  return duplicate;
 };
 
 let array = [1, 2, 3, 4, 5, 3, 6, 5];

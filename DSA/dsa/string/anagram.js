@@ -4,25 +4,45 @@
 // number of later is same but arragement is difrence is called anagram
 // same charector make the other word like cat = act is anagram
 
+// const anagram = (str1, str2) => {
+//   let objStr = {};
+//   // first check the length
+//   if (str1.length !== str2.length) {
+//     return false;
+//   }
+//   // using for loop
+//   for (let ch of str1) {
+//     //maxOccuring
+//     objStr[ch] = (objStr[ch] || 0) + 1;
+//   }
+//   for (let ch of str2) {
+//     if (!objStr[ch]) {
+//       return false;
+//     }
+//     objStr[ch]--;
+//   }
+//   return true;
+// };
+// console.log(anagram("hello", "lllho"));
+
+// o(n) linear time complexity
+
 const anagram = (str1, str2) => {
-  let objStr = {};
-  // first check the length
+  newObj = {};
   if (str1.length !== str2.length) {
     return false;
   }
-  // using for loop
-  for (let ch of str1) {
-    //maxOccuring
-    objStr[ch] = (objStr[ch] || 0) + 1;
+  // check max ocuring
+  for (let el of str1) {
+    newObj[el] = (newObj[el] || 0) + 1;
   }
-  for (let ch of str2) {
-    if (!objStr[ch]) {
+  for (let el of str2) {
+    if (!newObj[el]) {
       return false;
     }
-    objStr[ch]--;
+    newObj[el]--;
   }
   return true;
 };
-console.log(anagram("hello", "lllho"));
-
-// o(n) linear time complexity
+let result = anagram("hello", "ellho");
+console.log(result);

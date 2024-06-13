@@ -20,15 +20,15 @@
 // maxStrOcurr(string);
 
 const maxStrOcurr = (str) => {
-  let strObj = {};
-  maxKey = "";
-  for (let key of str) {
-    if (!strObj[key]) {
-      strObj[key] = 0;
+  let maxObj = {};
+  let maxKey = "";
+  for (let el of str) {
+    if (!maxObj[el]) {
+      maxObj[el] = 0;
     }
-    strObj[key]++;
-    if (maxKey == "" || strObj[key] > strObj[maxKey]) {
-      maxKey = key;
+    maxObj[el]++;
+    if (maxKey === "" || maxObj[el] > maxObj[maxKey]) {
+      maxKey = el;
     }
   }
   console.log(maxKey);

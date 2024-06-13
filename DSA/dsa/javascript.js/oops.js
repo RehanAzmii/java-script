@@ -11,7 +11,7 @@
 // - Instances (mew,this)
 
 // pillars of oops
-//1 Abstarction :- hide to details for xample fetch methods
+//1 Abstarction :- hide to details for Example fetch methods
 //2 En capsulation:- wrapped the data
 //3 Inheritance:-data inherite parent to child
 //4 Polymorphism:- many phase of object

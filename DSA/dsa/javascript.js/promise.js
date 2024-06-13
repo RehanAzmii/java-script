@@ -10,7 +10,7 @@ let promise = new Promise((resolve, reject) => {
   if (data < 4) {
     resolve("promise resolve");
   } else {
-    resolve("promise is rejected");
+    reject("promise is rejected");
   }
 });
 promise

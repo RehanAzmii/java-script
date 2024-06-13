@@ -27,3 +27,16 @@
 // let string = "RehanAhmadMakhdoomPur";
 // let res = capitalIndex(string);
 // console.log(res);
+
+const myFunc = (str) => {
+  let newIndex = [];
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] >= "A" && str[i] <= "Z") {
+      newIndex.push(i);
+    }
+  }
+  console.log(newIndex);
+};
+
+let string = "RehanAhamd Makhdoompur";
+myFunc(string);

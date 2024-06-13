@@ -37,13 +37,13 @@
 
 const removeHyphen = (str) => {
   let result = "";
-  let previousCha = "";
-  for (let ch of str) {
-    if ((ch === "-") & (previousCha === "-")) {
+  let prevChar = "";
+  for (let el of str) {
+    if (el === "-" && prevChar === "-") {
       continue;
     }
-    result += ch;
-    previousCha = ch;
+    result += el;
+    prevChar = el;
   }
   return result;
 };

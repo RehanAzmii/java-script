@@ -17,18 +17,3 @@
 //   }
 // }
 // console.log(arr);
-
-const deleteArray = (arr) => {
-  let newEle = [];
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i] === 3) {
-      continue;
-    } else {
-      newEle.push(arr[i]);
-    }
-  }
-  return newEle;
-};
-let array = [1, 3, 6, 9, 0];
-let res = deleteArray(array);
-console.log(res);

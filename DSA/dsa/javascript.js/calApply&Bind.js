@@ -22,13 +22,15 @@
 // let res = printDetails.bind(userDetails1, "india", "noida");
 // res();
 
-let userDetail = {
+const user = {
   name: "rehan",
-  last: "ahmad",
+  age: 26,
 };
 
-function printDetails(country, city) {
-  console.log(`my name is ${this.name} ${this.last} ${country} ${city}`);
+function userDetails(country, city) {
+  console.log(
+    `my name is ${this.name} my age is ${this.age} ${country} ${city}`
+  );
 }
 
-printDetails.call(userDetail, "india", "lucknow");
+userDetails.call(user, "india", "noida");

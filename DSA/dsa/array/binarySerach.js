@@ -14,13 +14,25 @@
 // const res = linearSearch(array, position);
 // console.log(res);
 
+const binarySearch = (arr, target) => {
+  let left = 0;
+  let right = arr.length - 1;
+  while (right > left) {
+    let mid = Math.floor((left + right) / 2);
+    if (arr[mid] === target) {
+      return mid;
+    } else if (arr[mid] < target) {
+      left = mid + 1;
+    } else {
+      right = mid - 1;
+    }
+  }
+};
+let array = [1, 2, 3, 4, 5, 6, 7, 8];
+let target = 6;
+let res = binarySearch(array, target);
+console.log(res);
 // linear search algorithm
-
-// const user = [
-//   { username: "rehan", email: "rehan@gmail.com" },
-//   { username: "abc", email: "abc@gmail.com" },
-//   { username: "xyz", email: "xyz@gmail.com" },
-// ];
 
 // const isUserExit = (array, val) => {
 //   for (let item of array) {
@@ -91,3 +103,21 @@
 // };
 // let result = searchAlgo([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15], 7);
 // console.log(result);
+
+const user = [
+  { name: "rehan", age: 22 },
+  { name: "ahsan", age: 20 },
+  { name: "noman", age: 25 },
+];
+
+// Assume the first person is the oldest initially
+let oldestMan = user[0];
+
+// Iterate over the array starting from the second element
+for (let i = 1; i < user.length; i++) {
+  if (user[i].age > oldestMan.age) {
+    oldestMan = user[i];
+  }
+}
+
+console.log("Oldest man:", oldestMan);

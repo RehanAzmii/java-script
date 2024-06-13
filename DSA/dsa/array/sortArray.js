@@ -73,7 +73,16 @@
 //1 consider 2nd element ,arr[1]  start from here
 // 2
 
-const insertionSort = (arr) => {
-  for (let i = 1; i < arr.length; i++) {}
+const sort = (arr) => {
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = 0; j < arr.length; j++) {
+      if (arr[j] < arr[j + 1]) {
+        [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]];
+      }
+    }
+  }
+  return arr;
 };
-insertionSort([8, 2, 4, 1, 3]);
+
+let res = sort([1, 3, 6, 9, 34, 22, 44]);
+console.log(res);

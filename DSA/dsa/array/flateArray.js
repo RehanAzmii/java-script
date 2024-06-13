@@ -37,6 +37,37 @@
 // let res = flattenArray(array);
 // console.log(res);
 
+// let array = [
+//   2,
+//   3,
+//   5,
+//   [{ name: "Jhon Doe" }, 2, 3, 1, [true, 1, 2, ["name", 1, 2]], 2, 4],
+//   1,
+// ];
+
+// const flatArray = (arr) => {
+//   let flattenArray = [];
+//   let ar = [];
+//   for (let el of arr) {
+//     if (Array.isArray(el)) {
+//       flattenArray = flattenArray.concat(flatArray(el));
+//     } else {
+//       flattenArray.push(el);
+//     }
+//   }
+//   for (let el of newArr)
+//     if (typeof el === "number") {
+//       ar.push(el);
+//     }
+//   return ar;
+// };
+// let res = flatArray(array);
+// console.log(res);
+
+// let res = array?.flat(Infinity)?.filter((value) => typeof value === "number");
+
+// console.log(res);
+
 let array = [
   2,
   3,
@@ -45,25 +76,22 @@ let array = [
   1,
 ];
 
-const flatArray = (arr) => {
-  let flattenArray = [];
+let flatArray = (arr) => {
+  let newArr = [];
   let ar = [];
   for (let el of arr) {
     if (Array.isArray(el)) {
-      flattenArray = flattenArray.concat(flatArray(el));
+      newArr = newArr.concat(flatArray(el));
     } else {
-      flattenArray.push(el);
+      newArr.push(el);
     }
   }
-  for (let el of newArr)
-    if (typeof el === "number") {
-      ar.push(el);
+  for (let num of newArr) {
+    if (typeof num === "number") {
+      ar.push(num);
     }
+  }
   return ar;
 };
-let res = flatArray(array);
-console.log(res);
-
-// let res = array?.flat(Infinity)?.filter((value) => typeof value === "number");
-
-// console.log(res);
+let result = flatArray(array);
+console.log(result);

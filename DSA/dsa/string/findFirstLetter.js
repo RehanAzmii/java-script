@@ -49,8 +49,19 @@
 // console.log(res);
 
 const findFirstLater = (str) => {
-  t;
+  let first = "";
+  let isFirst = true;
+  for (let el of str) {
+    if (isFirst && first !== " ") {
+      first += el;
+      isFirst = false;
+    } else if (el === " ") {
+      isFirst = true;
+    }
+  }
+  return first;
 };
+
 let string = "Rehan ahmad makhdoompur";
 let res = findFirstLater(string);
 console.log(res);

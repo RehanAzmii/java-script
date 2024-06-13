@@ -5,16 +5,15 @@ let array = "rehanahmad";
 
 function findMostFrequent(arr) {
   let counts = {};
-  let maxCount = 0;
-  let mostFrequent;
+  let maxCount = "";
   for (let num of arr) {
     counts[num] = (counts[num] || 0) + 1;
-    if (counts[num] > maxCount) {
-      maxCount = counts[num];
-      mostFrequent = num;
+    if (maxCount == "" || counts[num] > counts[maxCount]) {
+      maxCount = num;
     }
   }
-  return mostFrequent;
+  console.log(counts);
+  return maxCount;
 }
 
 let result = findMostFrequent(array);
@@ -37,3 +36,19 @@ console.log("The most frequently occurring element is:", result);
 // let array = [1, 2, 2, 2, 3, 4, 5, 6, 7];
 
 // maxStrOcurr(array);
+
+// const maxOccur = (str) => {
+//   let count = {};
+//   let maxCount = 0;
+//   let mostFrequent;
+//   for (let num of str) {
+//     count[num] = (count[num] || 0) + 1;
+//     if (count[num] > maxCount) {
+//       maxCount = count[num];
+//       mostFrequent = num;
+//     }
+//   }
+//   return maxCount;
+// };
+// let result = maxOccur("rehanahmadmakhd");
+// console.log(result);

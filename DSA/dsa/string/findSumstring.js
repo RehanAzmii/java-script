@@ -14,9 +14,9 @@
 
 const findSumString = (str) => {
   let sum = 0;
-  for (let i of str) {
-    if ((i >= 0) & (i <= 9)) {
-      sum += parseInt(i);
+  for (let el of str) {
+    if (el >= "0" && el <= "9") {
+      sum += parseInt(el);
     }
   }
   return sum;

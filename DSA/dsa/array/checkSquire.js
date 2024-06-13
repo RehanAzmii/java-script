@@ -31,27 +31,53 @@
 // map1={1:1,2:2,4:1}
 // map2={1:1,4:2,16:1}
 
-const checkingSquire = (ar1, ar2) => {
+// const checkingSquire = (ar1, ar2) => {
+//   let map1 = {};
+//   let map2 = {};
+//   for (let item of ar1) {
+//     map1[item] = (map1[item] || 0) + 1;
+//   }
+//   for (let item2 of ar2) {
+//     map2[item2] = (map2[item2] || 0) + 1;
+//   }
+
+//   for (let key in map1) {
+//     if (!map2[key * key]) {
+//       // object keys compaire in term of square
+//       return false;
+//     }
+//     if (map1[key] !== map2[key * key]) {
+//       // value compaireS
+//       return false;
+//     }
+//   }
+//   return true;
+// };
+// let res = checkingSquire([1, 2, 4, 2], [1, 4, 4, 16]);
+// console.log(res);
+
+let checkSquire = (arr1, arr2) => {
   let map1 = {};
   let map2 = {};
-  for (let item of ar1) {
-    map1[item] = (map1[item] || 0) + 1;
+  // check max occur
+  for (let item of arr1) {
+    map1[item] = map1[item] || 0 + 1;
   }
-  for (let item2 of ar2) {
-    map2[item2] = (map2[item2] || 0) + 1;
+  for (let item2 of arr2) {
+    map2[item2] = map2[item2] || 0 + 1;
   }
-
   for (let key in map1) {
+    // key compaire
     if (!map2[key * key]) {
-      // object keys compaire in term of square
       return false;
     }
     if (map1[key] !== map2[key * key]) {
-      // value compaireS
+      // value compaire
       return false;
     }
   }
   return true;
 };
-let res = checkingSquire([1, 2, 4, 2], [1, 4, 4, 16]);
-console.log(res);
+
+let result = checkSquire([1, 2, 3, 4], [1, 9, 4, 16]);
+console.log(result);

@@ -24,11 +24,11 @@ const palindrome = (str) => {
     if (str[end] !== str[start]) {
       return false;
     }
-    start++;
     end--;
+    start++;
   }
   return true;
 };
-let string = "121 ";
+let string = "1212";
 let res = palindrome(string);
 console.log(res);

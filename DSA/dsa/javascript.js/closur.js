@@ -5,13 +5,27 @@
 // They help remove redundant code
 // They help maintain modular code
 
-const func = () => {
-  let a = 0;
-  let innerFunc = () => {
-    a++;
-    console.log(a);
-  };
-  return innerFunc;
-};
-let res = func();
-res();
+// const func = () => {
+//   let a = 0;
+//   let innerFunc = () => {
+//     a++;
+//     console.log(a);
+//   };
+//   return innerFunc;
+// };
+// let res = func();
+// res();
+
+function sum(i) {
+  setTimeout(function () {
+    console.log(i);
+  }, i * 1000);
+}
+
+function a() {
+  for (var i = 1; i <= 5; i++) {
+    sum(i);
+  }
+  console.log("SetTimeOut Example");
+}
+a();

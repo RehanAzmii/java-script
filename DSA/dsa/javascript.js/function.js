@@ -74,8 +74,20 @@ myFunc();
 // curring in js transfer function with multiple arguments in to nested sreies of function
 //  each take a single argument
 
-// let sum = (a) => (b) => (c) => console.log(a + b + c);
-// sum(1)(2)(3);
+let sum = (a) => (b) => (c) => () => console.log(a + b + c);
+sum(1)(2)(3)();
+
+// const sum = (num1) => {
+//   return (num2) => {
+//     if (num2 === undefined) {
+//       return num1;
+//     } else {
+//       return sum(num1 + num2);
+//     }
+//   };
+// };
+// const res = sum(1)(2)(3)(4)();
+// console.log(res);
 
 // high order function
 // high order function are function that take an other function as argument

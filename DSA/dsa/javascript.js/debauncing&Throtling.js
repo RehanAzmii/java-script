@@ -17,23 +17,23 @@ function myDebounce(call, d) {
     }, d);
   };
 }
-const beterFunction = myDebounce(getData, 1000);
+const myfunc = myDebounce(getData, 1000);
 
 // throtling:-
 
 // Throttling limits the number of times the function can be called over a certain period
 // Ensures that the function is called only once, even if the event is triggered multiple times.
 
-const myThrotle = (func, d) => {
-  return function (...arg) {
-    document.getElementById("myid").disabled = true;
-    setTimeout(() => {
-      func();
-    }, d);
-  };
-};
+// const myThrotle = (func, d) => {
+//   return function (...arg) {
+//     document.getElementById("myid").disabled = true;
+//     setTimeout(() => {
+//       func();
+//     }, d);
+//   };
+// };
 
-const newFunc = myThrotle(() => {
-  document.getElementById("myid").disabled = false;
-  console.log("function called....");
-}, 5000);
+// const newFunc = myThrotle(() => {
+//   document.getElementById("myid").disabled = false;
+//   console.log("function called....");
+// }, 5000);

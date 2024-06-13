@@ -55,7 +55,26 @@
 
 // console.log(stringWithStars); // "h*e*l*l*o"
 
-let zero = (arr) => {
+// let zero = (arr) => {
+//   let newArr = [];
+//   let countZero = 0;
+//   for (let el of arr) {
+//     if (el === 0) {
+//       countZero++;
+//     } else {
+//       newArr.push(el);
+//     }
+//   }
+//   for (let i = 0; i < countZero; i++) {
+//     newArr.unshift(0);
+//   }
+//   return newArr;
+// };
+// let array = [1, 0, 5, 3, 0, 4, 0, 2, 0, 6];
+// let res = zero(array);
+// console.log(res);
+
+const zero = (arr) => {
   let newArr = [];
   let countZero = 0;
   for (let el of arr) {
@@ -68,8 +87,6 @@ let zero = (arr) => {
   for (let i = 0; i < countZero; i++) {
     newArr.unshift(0);
   }
-  return newArr;
+  console.log(newArr);
 };
-let array = [1, 0, 5, 3, 0, 4, 0, 2, 0, 6];
-let res = zero(array);
-console.log(res);
+zero([1, 2, 0, 0, 7, 0, 5, 0]);
