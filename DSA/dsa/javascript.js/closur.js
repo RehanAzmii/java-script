@@ -16,14 +16,13 @@
 // let res = func();
 // res();
 
-function sum(i) {
-  setTimeout(function () {
-    console.log(i);
-  }, i * 1000);
-}
-
 function a() {
   for (var i = 1; i <= 5; i++) {
+    function sum(i) {
+      setTimeout(function () {
+        console.log(i);
+      }, i * 1000);
+    }
     sum(i);
   }
   console.log("SetTimeOut Example");

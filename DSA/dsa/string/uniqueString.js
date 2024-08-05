@@ -28,18 +28,17 @@
 // console.log(res);
 
 const findUniqueElement = (arr) => {
-  let uniqueEle = [];
-  let duplicate = [];
+  let uniqueEle = "";
+
   for (let el of arr) {
     if (!uniqueEle.includes(el)) {
-      uniqueEle.push(el);
+      uniqueEle += el;
     } else {
-      duplicate.push(el);
     }
   }
-  return duplicate;
+  return uniqueEle.length;
 };
 
-let array = [1, 2, 3, 4, 5, 3, 6, 5];
+let array = "pwwwweellw";
 let res = findUniqueElement(array);
 console.log(res);

@@ -17,18 +17,24 @@
 // let str = "121";
 // console.log(palindrome(str));
 
-const palindrome = (str) => {
-  let start = 0;
-  let end = str.length - 1;
-  while (end > start) {
-    if (str[end] !== str[start]) {
-      return false;
-    }
-    end--;
-    start++;
-  }
-  return true;
+// const palindrome = (str) => {
+//   let start = 0;
+//   let end = str.length - 1;
+//   while (end > start) {
+//     if (str[end] !== str[start]) {
+//       return false;
+//     }
+//     end--;
+//     start++;
+//   }
+//   return true;
+// };
+// let string = "1212";
+// let res = palindrome(string);
+// console.log(res);
+
+const isPalindrome = (str) => {
+  return str === str.split("").reverse().join("");
 };
-let string = "1212";
-let res = palindrome(string);
-console.log(res);
+
+console.log(isPalindrome("12"));

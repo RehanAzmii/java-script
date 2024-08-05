@@ -27,22 +27,34 @@
 
 // o(n) linear time complexity
 
-const anagram = (str1, str2) => {
-  newObj = {};
+// const anagram = (str1, str2) => {
+//   newObj = {};
+//   if (str1.length !== str2.length) {
+//     return false;
+//   }
+//   // check max ocuring
+//   for (let el of str1) {
+//     newObj[el] = (newObj[el] || 0) + 1;
+//   }
+//   for (let el of str2) {
+//     if (!newObj[el]) {
+//       return false;
+//     }
+//     newObj[el]--;
+//   }
+//   return true;
+// };
+// let result = anagram("hello", "ellho");
+// console.log(result);
+
+const isAnnagram = (str1, str2) => {
+  str1 = str1.trim();
+  str2 = str2.trim();
   if (str1.length !== str2.length) {
     return false;
   }
-  // check max ocuring
-  for (let el of str1) {
-    newObj[el] = (newObj[el] || 0) + 1;
-  }
-  for (let el of str2) {
-    if (!newObj[el]) {
-      return false;
-    }
-    newObj[el]--;
-  }
-  return true;
+  str1 = str1.split("").sort().join("");
+  str2 = str2.split("").sort().join("");
+  return str1 === str2;
 };
-let result = anagram("hello", "ellho");
-console.log(result);
+console.log(isAnnagram("hello  ", "lleho"));

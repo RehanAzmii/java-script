@@ -10,7 +10,7 @@ function getData() {
 
 function myDebounce(call, d) {
   let timer;
-  return function (...args) {
+  return function () {
     if (timer) clearTimeout(timer);
     timer = setTimeout(() => {
       call();

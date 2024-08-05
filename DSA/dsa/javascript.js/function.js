@@ -74,8 +74,8 @@ myFunc();
 // curring in js transfer function with multiple arguments in to nested sreies of function
 //  each take a single argument
 
-let sum = (a) => (b) => (c) => () => console.log(a + b + c);
-sum(1)(2)(3)();
+// let sum = (a) => (b) => (c) => () => console.log(a + b + c);
+// sum(1)(2)(3)();
 
 // const sum = (num1) => {
 //   return (num2) => {
@@ -86,8 +86,28 @@ sum(1)(2)(3)();
 //     }
 //   };
 // };
-// const res = sum(1)(2)(3)(4)();
+// const res = sum(1)(2)(3)(4)(6)();
 // console.log(res);
+
+const Sum = (...args) => {
+  let accumalateSum = (...innerArgs) => {
+    if (innerArgs.length === 0) {
+      return accumalateSum.total;
+    }
+    for (const arg of innerArgs) {
+      accumalateSum.total += arg;
+    }
+    return accumalateSum;
+  };
+  accumalateSum.total = 0;
+  for (const arg of args) {
+    accumalateSum.total += arg;
+  }
+  return accumalateSum;
+};
+
+console.log(Sum(2, 3, 4, 5, 6)());
+console.log(Sum(2)(3)(4)(5)(6)());
 
 // high order function
 // high order function are function that take an other function as argument

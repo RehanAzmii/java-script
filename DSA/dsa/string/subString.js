@@ -83,19 +83,45 @@ console.log(findConsecutiveVowelSubstrings("heelleo"));
 
 // console.log(res); /// [eo]
 
-const subVovelString = (str) => {
-  const vowels = "aeiou";
-  let result = "";
-  for (let el of str) {
-    if (vowels.includes(el)) {
-      result += el;
-    }
-  }
-  //   return [result.substring(0, 2), result.substring(2)];
-  return [result.slice(0, 2), result.slice(2)];
-};
-const inputString = "heelleo";
+// const subVovelString = (str) => {
+//   const vowels = "aeiou";
+//   let result = "";
+//   for (let el of str) {
+//     if (vowels.includes(el)) {
+//       result += el;
+//     }
+//   }
+//   //   return [result.substring(0, 2), result.substring(2)];
+//   return [result.slice(0, 2), result.slice(2)];
+// };
+// const inputString = "heelleo";
 
-let res = subVovelString(inputString);
+// let res = subVovelString(inputString);
 
-console.log(res); /// [ee,eo]
+// console.log(res); /// [ee,eo]
+
+// const lengthOfLongestSubstring = (s) => {
+//   // sliding window
+
+//   if (!s) {
+//     return 0;
+//   }
+//   let end = 0;
+//   let start = 0;
+//   let maxLngth = 0;
+
+//   const Uniquechar = new Set();
+//   while (end < s.length) {
+//     if (!Uniquechar.has(s[end])) {
+//       Uniquechar.add(s[end]);
+//       end++;
+//       maxLngth = Math.max(maxLngth, Uniquechar.size);
+//     } else {
+//       Uniquechar.delete(s[start]);
+//       start++;
+//     }
+//   }
+//   return maxLngth;
+// };
+// let result = lengthOfLongestSubstring("bcabcbb");
+// console.log(result);
