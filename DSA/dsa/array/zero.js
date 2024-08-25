@@ -74,19 +74,27 @@
 // let res = zero(array);
 // console.log(res);
 
-const zero = (arr) => {
-  let newArr = [];
-  let countZero = 0;
-  for (let el of arr) {
-    if (el === 0) {
-      countZero++;
-    } else {
-      newArr.push(el);
-    }
-  }
-  for (let i = 0; i < countZero; i++) {
-    newArr.unshift(0);
-  }
-  console.log(newArr);
-};
-zero([1, 2, 0, 0, 7, 0, 5, 0]);
+// const zero = (arr) => {
+//   let newArr = [];
+//   let countZero = 0;
+//   for (let el of arr) {
+//     if (el === 0) {
+//       countZero++;
+//     } else {
+//       newArr.push(el);
+//     }
+//   }
+//   for (let i = 0; i < countZero; i++) {
+//     newArr.unshift(0);
+//   }
+//   console.log(newArr);
+// };
+// zero([1, 2, 0, 0, 7, 0, 5, 0]);
+
+let arr = [1, 2, 0, 4, 3, 0, 5, 0];
+let zero = 0;
+const result = [
+  arr.filter((el) => el === zero),
+  arr.filter((el) => el !== zero),
+].flat();
+console.log(result);

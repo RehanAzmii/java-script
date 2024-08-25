@@ -33,8 +33,43 @@
 // let res = palindrome(string);
 // console.log(res);
 
-const isPalindrome = (str) => {
-  return str === str.split("").reverse().join("");
-};
+// const isPalindrome = (str) => {
+//   return str === str.split("").reverse().join("");
+// };
 
-console.log(isPalindrome("12"));
+// console.log(isPalindrome("12"));
+
+// longest palidrome
+
+function longestPalindrome(s) {
+  if (s.length === 0) return "";
+
+  let start = 0,
+    end = 0;
+
+  // Function to expand around the center
+  function expandAroundCenter(left, right) {
+    while (left >= 0 && right < s.length && s[left] === s[right]) {
+      left--;
+      right++;
+    }
+    // return the length of the palindrome
+    return right - left - 1;
+  }
+
+  for (let i = 0; i < s.length; i++) {
+    let len1 = expandAroundCenter(i, i); // Odd length palindromes
+    let len2 = expandAroundCenter(i, i + 1); // Even length palindromes
+    let len = Math.max(len1, len2);
+
+    if (len > end - start) {
+      start = i - Math.floor((len - 1) / 2);
+      end = i + Math.floor(len / 2);
+    }
+  }
+
+  return s.slice(start, end + 1);
+}
+
+let str = "rehanhello level 123454321";
+console.log(longestPalindrome(str));

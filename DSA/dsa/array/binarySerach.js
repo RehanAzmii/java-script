@@ -14,24 +14,24 @@
 // const res = linearSearch(array, position);
 // console.log(res);
 
-const binarySearch = (arr, target) => {
-  let left = 0;
-  let right = arr.length - 1;
-  while (right > left) {
-    let mid = Math.floor((left + right) / 2);
-    if (arr[mid] === target) {
-      return mid;
-    } else if (arr[mid] < target) {
-      left = mid + 1;
-    } else {
-      right = mid - 1;
-    }
-  }
-};
-let array = [1, 2, 3, 4, 5, 6, 7, 8];
-let target = 6;
-let res = binarySearch(array, target);
-console.log(res);
+// const binarySearch = (arr, target) => {
+//   let left = 0;
+//   let right = arr.length - 1;
+//   while (right > left) {
+//     let mid = Math.floor((left + right) / 2);
+//     if (arr[mid] === target) {
+//       return mid;
+//     } else if (arr[mid] < target) {
+//       left = mid + 1;
+//     } else {
+//       right = mid - 1;
+//     }
+//   }
+// };
+// let array = [1, 2, 3, 4, 5, 6, 7, 8];
+// let target = 6;
+// let res = binarySearch(array, target);
+// console.log(res);
 // linear search algorithm
 
 // const isUserExit = (array, val) => {
@@ -121,3 +121,25 @@ for (let i = 1; i < user.length; i++) {
 }
 
 console.log("Oldest man:", oldestMan);
+
+const myFunc = (arr, target) => {
+  let left = 0;
+  let right = arr.length - 1;
+  // console.log(left)
+  while (right >= left) {
+    let mid = Math.floor((left + right) / 2);
+    if (arr[mid] === target) {
+      return mid;
+    } else if (arr[mid] < target) {
+      left = mid + 1;
+    } else {
+      right = mid - 1;
+    }
+  }
+  return -1;
+};
+
+let array = [1, 2, 3, 4, 5, 6, 7, 8];
+let target = 5;
+let result = myFunc(array, target);
+console.log(result);

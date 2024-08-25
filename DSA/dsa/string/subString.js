@@ -100,28 +100,28 @@ console.log(findConsecutiveVowelSubstrings("heelleo"));
 
 // console.log(res); /// [ee,eo]
 
-// const lengthOfLongestSubstring = (s) => {
-//   // sliding window
+const lengthOfLongestSubstring = (s) => {
+  // sliding window
 
-//   if (!s) {
-//     return 0;
-//   }
-//   let end = 0;
-//   let start = 0;
-//   let maxLngth = 0;
+  if (!s) {
+    return 0;
+  }
+  let end = 0;
+  let start = 0;
+  let maxLngth = 0;
 
-//   const Uniquechar = new Set();
-//   while (end < s.length) {
-//     if (!Uniquechar.has(s[end])) {
-//       Uniquechar.add(s[end]);
-//       end++;
-//       maxLngth = Math.max(maxLngth, Uniquechar.size);
-//     } else {
-//       Uniquechar.delete(s[start]);
-//       start++;
-//     }
-//   }
-//   return maxLngth;
-// };
-// let result = lengthOfLongestSubstring("bcabcbb");
-// console.log(result);
+  const Uniquechar = new Set();
+  while (end < s.length) {
+    if (!Uniquechar.has(s[end])) {
+      Uniquechar.add(s[end]);
+      end++;
+      maxLngth = Math.max(maxLngth, Uniquechar.size);
+    } else {
+      Uniquechar.delete(s[start]);
+      start++;
+    }
+  }
+  return maxLngth;
+};
+let result = lengthOfLongestSubstring("bcabcbb");
+console.log(result);

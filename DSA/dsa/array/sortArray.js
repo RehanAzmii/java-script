@@ -84,5 +84,5 @@ const sort = (arr) => {
   return arr;
 };
 
-let res = sort([1, 3, 6, 9, 34, 22, 44]);
+let res = sort([1, 3, 9, 6, 34, 22, 44]);
 console.log(res);
