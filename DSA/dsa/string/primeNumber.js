@@ -19,18 +19,27 @@
 // console.log(result);
 
 const isPrime = (number) => {
-  if (number <= 1) {
-    return false;
-  }
+  let result = true;
   for (let i = 2; i < number; i++) {
     if (number % i === 0) {
-      return false;
+      return (result = false);
     }
+    break;
+  }
+  return result;
+};
+
+console.log(isPrime(17));
+console.log(isPrime(18));
+
+// factorial count
+
+const getFactorial = (num) => {
+  let result = 1;
+  for (let i = 1; i <= num; i++) {
+    result *= i;
   }
 };
-let checkNumber = 17;
-if (isPrime(checkNumber)) {
-  console.log(`${checkNumber} is a prime number`);
-} else {
-  console.log(`${checkNumber} is not a prime number`);
-}
+
+let result = getFactorial(5);
+console.log(result);

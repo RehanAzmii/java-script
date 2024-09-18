@@ -65,3 +65,27 @@ const findFirstLater = (str) => {
 let string = "Rehan ahmad makhdoompur";
 let res = findFirstLater(string);
 console.log(res);
+
+// string first later is capital
+function capitalizeWords(input) {
+  let words = input.toLowerCase().split(" "); // Split the string into words
+  for (let i = 0; i < words.length; i++) {
+    words[i] = words[i].charAt(0).toUpperCase() + words[i].slice(1); // Capitalize first letter
+  }
+  return words.join(" "); // Join the words back into a string
+}
+
+let input = "rehan ahmad makhdoompur";
+let output = capitalizeWords(input);
+console.log(output); // Output: Rehan Ahmad Makhdoompur
+
+// convert first latter in uppercase
+// const myfunc = (str) => {
+//   return str
+//     .split("")
+//     .map((item, index) => (index === 0 ? item.toUpperCase() : item))
+//     .join("");
+// };
+
+// let result = myfunc("rehan ahmad makhdoompur");
+// console.log(result);

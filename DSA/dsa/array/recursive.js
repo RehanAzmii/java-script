@@ -61,18 +61,38 @@
 // [1,3,5,7,9] -> output
 // number%2!==0
 
-const findOdd = (array) => {
-  let result = [];
-  function helperRecursive(inputArray) {
-    if (inputArray.length === 0) {
-      return;
-    } else if (inputArray[0] % 2 !== 0) {
-      result.push(inputArray[0]);
+// const findOdd = (array) => {
+//   let result = [];
+//   function helperRecursive(inputArray) {
+//     if (inputArray.length === 0) {
+//       return;
+//     } else if (inputArray[0] % 2 !== 0) {
+//       result.push(inputArray[0]);
+//     }
+//     helperRecursive(inputArray.slice(1)); // recursive call
+//   }
+//   helperRecursive(array); // first time calling
+//   return result;
+// };
+// let result = findOdd([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
+// console.log(result);
+
+function sum(...args) {
+  // Inner function to handle currying
+  const innerSum = (...innerArgs) => {
+    if (innerArgs.length === 0) {
+      // Base case: return the sum when no arguments are passed
+      return args.reduce((acc, num) => acc + num, 0);
+    } else {
+      // Add new arguments to the existing arguments and return the curried function
+      args = args.concat(innerArgs);
+      return innerSum;
     }
-    helperRecursive(inputArray.slice(1)); // recursive call
-  }
-  helperRecursive(array); // first time calling
-  return result;
-};
-let result = findOdd([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
-console.log(result);
+  };
+
+  return innerSum;
+}
+
+// Examples:
+console.log(sum(1, 2, 3, 4, 5, 5, 6)()); // Output: 26
+console.log(sum(1)(2)(3)(4)(5, 5)(6)()); // Output: 26
